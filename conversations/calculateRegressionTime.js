@@ -2,9 +2,7 @@ let testCases
 let devices
 let request = require('request')
 
-
 function predictRegressionTime(testCases, devices, callback){
-  console.log(testCases, devices)
   const options = {
       url: 'http://localhost:3001/predict',
       qs:{ x: `${testCases},${devices}` }
@@ -13,7 +11,6 @@ function predictRegressionTime(testCases, devices, callback){
     if (err) {
       console.log("Error", err)
     }
-    console.log("**********",(JSON.parse(body)[0]/1140).toFixed(2))
     callback((JSON.parse(body)[0]/1140).toFixed(2))
   });
 }
@@ -32,9 +29,8 @@ exports.calculateRegressionTime = (bot, message) => {
                 pattern: 'yes',
                 callback: function(response, convo) {
                   predictRegressionTime(testCases, devices, (prediction) => {
-                    console.log("************Prediction******", prediction)
                     bot.reply(message,`According to my calculations it should take around ${prediction} day(s)`)
-                    convo.next();  
+                    convo.next();
                   })
                 }
               },

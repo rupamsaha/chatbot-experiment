@@ -9,7 +9,6 @@ var filepath = './data.csv'
 regressionTime.trainBot(filepath, (lr) => {
   app.get('/predict', (req, res) => {
       var a = lr.predict(req.query.x.split(','))
-      console.log(a)
       res.send([a])
   })
 })
