@@ -16,6 +16,9 @@
     "botkit-witai": "^1.0.8",
     "csv-parse": "^2.0.0",
     "express": "^4.16.2",
+    "math": "0.0.3",
+    "moment": "^2.20.1",
+    "request": "^2.83.0",
     "shaman": "^0.3.2"
   }
 }

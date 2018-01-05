@@ -1,3 +1,0 @@
-function getStatus(){
-  return execStatus
-}
