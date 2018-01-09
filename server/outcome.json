@@ -1,398 +1,2143 @@
 {
-  "Total-Regression": 11,
+  "Total-Regression": 46,
   "TestPacks": [
     {
-      "TotalDevices": 6,
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1485516089,
+          "Max-Time": 1485535147,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1485513833,
+          "Max-Time": 1485534195,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1485526782,
+          "Max-Time": 1485534357,
+          "TotalResourceCount": [
+            "136",
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1485768365,
+          "Max-Time": 1485776576,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1485509451,
+          "Max-Time": 1485533449,
+          "TotalResourceCount": [
+            "112"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1484908609,
+          "Max-Time": 1484929588,
+          "TotalResourceCount": [
+            "136",
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1484913883,
+          "Max-Time": 1484923972,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1484908901,
+          "Max-Time": 1484919931,
+          "TotalResourceCount": [
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1485165823,
+          "Max-Time": 1485187645,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1484924189,
+          "Max-Time": 1485184610,
+          "TotalResourceCount": [
+            "303"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 7,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 14,
+          "Min-Time": 1484305644,
+          "Max-Time": 1484585544,
+          "TotalResourceCount": [
+            "136",
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1484235175,
+          "Max-Time": 1484238538,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 2,
+          "Min-Time": 1484323494,
+          "Max-Time": 1484323508,
+          "TotalResourceCount": [
+            "53"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 1,
+      "Execution": [
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1483551627,
+          "Max-Time": 1483612578,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1483531240,
+          "Max-Time": 1483542107,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1483547950,
+          "Max-Time": 1483549426,
+          "TotalResourceCount": [
+            "271"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1483530579,
+          "Max-Time": 1483544279,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1483523243,
+          "Max-Time": 1483544845,
+          "TotalResourceCount": [
+            "346"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 17,
+          "Min-Time": 1487855961,
+          "Max-Time": 1487951409,
+          "TotalResourceCount": [
+            "520"
+          ]
+        },
+        {
+          "TotalTestcases": 17,
+          "Min-Time": 1487933852,
+          "Max-Time": 1488189415,
+          "TotalResourceCount": [
+            "67",
+            "762"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 1,
+      "Execution": [
+        {
+          "TotalTestcases": 18,
+          "Min-Time": 1487237262,
+          "Max-Time": 1487338745,
+          "TotalResourceCount": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 3,
+      "Execution": [
+        {
+          "TotalTestcases": 18,
+          "Min-Time": 1486725342,
+          "Max-Time": 1486982967,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 18,
+          "Min-Time": 1486650020,
+          "Max-Time": 1486750651,
+          "TotalResourceCount": [
+            "67",
+            "136",
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 12,
+          "Min-Time": 1486657624,
+          "Max-Time": 1486743997,
+          "TotalResourceCount": [
+            "112"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 1,
+          "Min-Time": 1486376809,
+          "Max-Time": 1486376809,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 14,
+          "Min-Time": 1486049332,
+          "Max-Time": 1486124445,
+          "TotalResourceCount": [
+            "53",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 14,
+          "Min-Time": 1486140206,
+          "Max-Time": 1486143758,
+          "TotalResourceCount": [
+            "136",
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 14,
+          "Min-Time": 1486373671,
+          "Max-Time": 1486380432,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 14,
+          "Min-Time": 1486121225,
+          "Max-Time": 1486387852,
+          "TotalResourceCount": [
+            "112",
+            "692"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 3,
+      "Execution": [
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1490878092,
+          "Max-Time": 1490973543,
+          "TotalResourceCount": [
+            "53",
+            "67",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1490870865,
+          "Max-Time": 1490977243,
+          "TotalResourceCount": [
+            "57",
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 12,
+          "Min-Time": 1490884180,
+          "Max-Time": 1490970765,
+          "TotalResourceCount": [
+            "303"
+          ]
+        },
+        {
+          "TotalTestcases": 12,
+          "Min-Time": 1490951501,
+          "Max-Time": 1490959229,
+          "TotalResourceCount": [
+            "136",
+            "283"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 8,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 12,
+          "Min-Time": 1490361394,
+          "Max-Time": 1490372405,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1490603488,
+          "Max-Time": 1490610990,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1490617391,
+          "Max-Time": 1490624626,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1490371182,
+          "Max-Time": 1490374426,
+          "TotalResourceCount": [
+            "136",
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 4,
+          "Min-Time": 1490362013,
+          "Max-Time": 1490370665,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1490602697,
+          "Max-Time": 1490604444,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1490356322,
+          "Max-Time": 1490620625,
+          "TotalResourceCount": [
+            "112",
+            "346"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 17,
+          "Min-Time": 1489591980,
+          "Max-Time": 1490019173,
+          "TotalResourceCount": [
+            "67",
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 17,
+          "Min-Time": 1489591991,
+          "Max-Time": 1490008140,
+          "TotalResourceCount": [
+            "67",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 19,
+          "Min-Time": 1489660156,
+          "Max-Time": 1489683943,
+          "TotalResourceCount": [
+            "67",
+            "692"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 3,
+      "Execution": [
+        {
+          "TotalTestcases": 13,
+          "Min-Time": 1489049498,
+          "Max-Time": 1489158788,
+          "TotalResourceCount": [
+            "67",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 15,
+          "Min-Time": 1489049511,
+          "Max-Time": 1489082264,
+          "TotalResourceCount": [
+            "67",
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 16,
+          "Min-Time": 1489068137,
+          "Max-Time": 1489396501,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1489049612,
+          "Max-Time": 1489064625,
+          "TotalResourceCount": [
+            "67",
+            "136",
+            "283"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 3,
+      "Execution": [
+        {
+          "TotalTestcases": 13,
+          "Min-Time": 1488447838,
+          "Max-Time": 1488550492,
+          "TotalResourceCount": [
+            "57",
+            "67",
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 12,
+          "Min-Time": 1488447856,
+          "Max-Time": 1488544904,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 14,
+          "Min-Time": 1488795465,
+          "Max-Time": 1488798611,
+          "TotalResourceCount": [
+            "67",
+            "520"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1488444795,
+          "Max-Time": 1488469360,
+          "TotalResourceCount": [
+            "67",
+            "136"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1493303402,
+          "Max-Time": 1493391985,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1493301499,
+          "Max-Time": 1493388049,
+          "TotalResourceCount": [
+            "57"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1493303721,
+          "Max-Time": 1493367781,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 2,
+          "Min-Time": 1493718208,
+          "Max-Time": 1493718208,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1493376199,
+          "Max-Time": 1493388325,
+          "TotalResourceCount": [
+            "136",
+            "283"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 1,
       "Execution": [
         {
           "TotalTestcases": 7,
-          "Min-Time": 1513335224,
-          "Max-Time": 1513339355
+          "Min-Time": 1492690467,
+          "Max-Time": 1492778226,
+          "TotalResourceCount": [
+            "112"
+          ]
         },
         {
           "TotalTestcases": 7,
-          "Min-Time": 1513350540,
-          "Max-Time": 1513353463
+          "Min-Time": 1492767874,
+          "Max-Time": 1492783209,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1492691798,
+          "Max-Time": 1492701985,
+          "TotalResourceCount": [
+            "520"
+          ]
         },
         {
           "TotalTestcases": 7,
-          "Min-Time": 1513343872,
-          "Max-Time": 1513353766
+          "Min-Time": 1492772927,
+          "Max-Time": 1492772927,
+          "TotalResourceCount": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1492525576,
+          "Max-Time": 1492528255,
+          "TotalResourceCount": [
+            "136",
+            "283"
+          ]
         },
         {
-          "TotalTestcases": 4,
-          "Min-Time": 1513338120,
-          "Max-Time": 1513339710
+          "TotalTestcases": 5,
+          "Min-Time": 1492524298,
+          "Max-Time": 1492526239,
+          "TotalResourceCount": [
+            "520"
+          ]
         },
         {
-          "TotalTestcases": 4,
-          "Min-Time": 1513353609,
-          "Max-Time": 1513353668
+          "TotalTestcases": 5,
+          "Min-Time": 1492520523,
+          "Max-Time": 1492527611,
+          "TotalResourceCount": [
+            "112"
+          ]
         },
         {
-          "TotalTestcases": 4,
-          "Min-Time": 1513354665,
-          "Max-Time": 1513358322
+          "TotalTestcases": 5,
+          "Min-Time": 1492523497,
+          "Max-Time": 1492525523,
+          "TotalResourceCount": [
+            "346"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 3,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 12,
+          "Min-Time": 1491902218,
+          "Max-Time": 1491914178,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 12,
+          "Min-Time": 1491838609,
+          "Max-Time": 1491930749,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 12,
+          "Min-Time": 1491838618,
+          "Max-Time": 1491920450,
+          "TotalResourceCount": [
+            "283",
+            "692"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1495781836,
+          "Max-Time": 1495804417,
+          "TotalResourceCount": [
+            "67",
+            "788"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1495794948,
+          "Max-Time": 1495811696,
+          "TotalResourceCount": [
+            "67",
+            "136"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1495781862,
+          "Max-Time": 1495795200,
+          "TotalResourceCount": [
+            "67",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1495792394,
+          "Max-Time": 1495793776,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1495781874,
+          "Max-Time": 1495831204,
+          "TotalResourceCount": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1495187774,
+          "Max-Time": 1495207514,
+          "TotalResourceCount": [
+            "283",
+            "296"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1495187233,
+          "Max-Time": 1495207016,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1495187438,
+          "Max-Time": 1495440345,
+          "TotalResourceCount": [
+            "136",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1495187187,
+          "Max-Time": 1495203811,
+          "TotalResourceCount": [
+            "112",
+            "788"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1495194015,
+          "Max-Time": 1495444615,
+          "TotalResourceCount": [
+            "67"
+          ]
         }
       ]
     },
     {
       "TotalDevices": 6,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1494580318,
+          "Max-Time": 1494947141,
+          "TotalResourceCount": [
+            "136",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1494501900,
+          "Max-Time": 1494595258,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1494580904,
+          "Max-Time": 1494600306,
+          "TotalResourceCount": [
+            "303"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1494599971,
+          "Max-Time": 1494838669,
+          "TotalResourceCount": [
+            "53",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1494584192,
+          "Max-Time": 1494839708,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 11,
+          "Min-Time": 1494840289,
+          "Max-Time": 1494841778,
+          "TotalResourceCount": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 6,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1498819986,
+          "Max-Time": 1498831726,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1498825239,
+          "Max-Time": 1499079370,
+          "TotalResourceCount": [
+            "67",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1498827405,
+          "Max-Time": 1499079013,
+          "TotalResourceCount": [
+            "296"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1498821080,
+          "Max-Time": 1499077392,
+          "TotalResourceCount": [
+            "136"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1498826830,
+          "Max-Time": 1499079019,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 2,
+          "Min-Time": 1499071643,
+          "Max-Time": 1499078596,
+          "TotalResourceCount": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1498576914,
+          "Max-Time": 1498641381,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1498641438,
+          "Max-Time": 1498645052,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1498576681,
+          "Max-Time": 1498580935,
+          "TotalResourceCount": [
+            "57"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1498577635,
+          "Max-Time": 1498639799,
+          "TotalResourceCount": [
+            "296",
+            "788"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1498577973,
+          "Max-Time": 1498637018,
+          "TotalResourceCount": [
+            "762"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1497961038,
+          "Max-Time": 1498037999,
+          "TotalResourceCount": [
+            "303"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1498040895,
+          "Max-Time": 1498041086,
+          "TotalResourceCount": [
+            "57"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1497965309,
+          "Max-Time": 1497966654,
+          "TotalResourceCount": [
+            "57"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1497953767,
+          "Max-Time": 1497967617,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1497969321,
+          "Max-Time": 1498061759,
+          "TotalResourceCount": [
+            "283",
+            "788"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 6,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1497002792,
+          "Max-Time": 1497015461,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1497022348,
+          "Max-Time": 1497264919,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1496996641,
+          "Max-Time": 1497002749,
+          "TotalResourceCount": [
+            "520"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1497003220,
+          "Max-Time": 1497260923,
+          "TotalResourceCount": [
+            "788"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1497000074,
+          "Max-Time": 1497019553,
+          "TotalResourceCount": [
+            "303"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1497006749,
+          "Max-Time": 1497261897,
+          "TotalResourceCount": [
+            "136",
+            "279"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 6,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1501237291,
+          "Max-Time": 1501254775,
+          "TotalResourceCount": [
+            "136",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1501254909,
+          "Max-Time": 1501258957,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1501251531,
+          "Max-Time": 1501493802,
+          "TotalResourceCount": [
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1501248256,
+          "Max-Time": 1501254599,
+          "TotalResourceCount": [
+            "520"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1501253174,
+          "Max-Time": 1501259498,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1501239398,
+          "Max-Time": 1501250737,
+          "TotalResourceCount": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1500645572,
+          "Max-Time": 1500888295,
+          "TotalResourceCount": [
+            "67",
+            "136"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1500641893,
+          "Max-Time": 1500650787,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1500646277,
+          "Max-Time": 1500650066,
+          "TotalResourceCount": [
+            "112",
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1500632855,
+          "Max-Time": 1500652008,
+          "TotalResourceCount": [
+            "303"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1500642073,
+          "Max-Time": 1500888233,
+          "TotalResourceCount": [
+            "67",
+            "283"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1500030593,
+          "Max-Time": 1500284547,
+          "TotalResourceCount": [
+            "112",
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1500039443,
+          "Max-Time": 1500043893,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1500037143,
+          "Max-Time": 1500293387,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1500031790,
+          "Max-Time": 1500038360,
+          "TotalResourceCount": [
+            "136",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1500041930,
+          "Max-Time": 1500284240,
+          "TotalResourceCount": [
+            "112",
+            "303"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1499433803,
+          "Max-Time": 1499441029,
+          "TotalResourceCount": [
+            "788"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1499439157,
+          "Max-Time": 1499441707,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1499438334,
+          "Max-Time": 1499675663,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1499437291,
+          "Max-Time": 1499440410,
+          "TotalResourceCount": [
+            "112",
+            "692"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 3,
+      "MaxResourceCount": 1,
+      "Execution": [
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1503654383,
+          "Max-Time": 1503658273,
+          "TotalResourceCount": [
+            "136"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1503653237,
+          "Max-Time": 1503655217,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1503651153,
+          "Max-Time": 1503654084,
+          "TotalResourceCount": [
+            "112"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 1,
+      "Execution": [
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1502709234,
+          "Max-Time": 1502714418,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1502709851,
+          "Max-Time": 1502723182,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1502707924,
+          "Max-Time": 1502713140,
+          "TotalResourceCount": [
+            "136"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1502713207,
+          "Max-Time": 1502788634,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1502718467,
+          "Max-Time": 1502719455,
+          "TotalResourceCount": [
+            "136"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 5,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1501852443,
+          "Max-Time": 1502103109,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1501857914,
+          "Max-Time": 1502103550,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1501850172,
+          "Max-Time": 1502101204,
+          "TotalResourceCount": [
+            "303",
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1501858047,
+          "Max-Time": 1502102203,
+          "TotalResourceCount": [
+            "136"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 3,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1506694225,
+          "Max-Time": 1506696552,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1506693556,
+          "Max-Time": 1506951611,
+          "TotalResourceCount": [
+            "67",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1506695479,
+          "Max-Time": 1506695766,
+          "TotalResourceCount": [
+            "692"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 1,
+      "Execution": [
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1506073559,
+          "Max-Time": 1506085110,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1506084091,
+          "Max-Time": 1506091347,
+          "TotalResourceCount": [
+            "303"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1506072635,
+          "Max-Time": 1506085746,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1506075876,
+          "Max-Time": 1506084151,
+          "TotalResourceCount": [
+            "136"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1505730954,
+          "Max-Time": 1505746745,
+          "TotalResourceCount": [
+            "112",
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1505474519,
+          "Max-Time": 1505732523,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1505461252,
+          "Max-Time": 1505733562,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1505474000,
+          "Max-Time": 1505731519,
+          "TotalResourceCount": [
+            "136"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 6,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1509118650,
+          "Max-Time": 1509119503,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1509112137,
+          "Max-Time": 1509357608,
+          "TotalResourceCount": [
+            "112",
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 9,
+          "Min-Time": 1509099878,
+          "Max-Time": 1509362350,
+          "TotalResourceCount": [
+            "303"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1509112701,
+          "Max-Time": 1509117277,
+          "TotalResourceCount": [
+            "490"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1509357576,
+          "Max-Time": 1509357585,
+          "TotalResourceCount": [
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1509118958,
+          "Max-Time": 1509360263,
+          "TotalResourceCount": [
+            "303"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 1,
+      "Execution": [
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1508501674,
+          "Max-Time": 1508512461,
+          "TotalResourceCount": [
+            "490"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1508503696,
+          "Max-Time": 1508514789,
+          "TotalResourceCount": [
+            "320"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1508493505,
+          "Max-Time": 1508504081,
+          "TotalResourceCount": [
+            "136"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1507881116,
+          "Max-Time": 1507898923,
+          "TotalResourceCount": [
+            "67",
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1507881131,
+          "Max-Time": 1508149524,
+          "TotalResourceCount": [
+            "67",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1507881142,
+          "Max-Time": 1507904597,
+          "TotalResourceCount": [
+            "67",
+            "490"
+          ]
+        },
+        {
+          "TotalTestcases": 10,
+          "Min-Time": 1507881151,
+          "Max-Time": 1507901584,
+          "TotalResourceCount": [
+            "67",
+            "692"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 4,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1507285943,
+          "Max-Time": 1507286509,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1507290874,
+          "Max-Time": 1507543735,
+          "TotalResourceCount": [
+            "346",
+            "490"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1507303602,
+          "Max-Time": 1507537748,
+          "TotalResourceCount": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 6,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1511523551,
+          "Max-Time": 1511533525,
+          "TotalResourceCount": [
+            "136",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1511521677,
+          "Max-Time": 1511537247,
+          "TotalResourceCount": [
+            "320"
+          ]
+        },
+        {
+          "TotalTestcases": 6,
+          "Min-Time": 1511518973,
+          "Max-Time": 1511780404,
+          "TotalResourceCount": [
+            "67",
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 4,
+          "Min-Time": 1511777317,
+          "Max-Time": 1511779263,
+          "TotalResourceCount": [
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 4,
+          "Min-Time": 1511533138,
+          "Max-Time": 1511538995,
+          "TotalResourceCount": [
+            "320"
+          ]
+        },
+        {
+          "TotalTestcases": 4,
+          "Min-Time": 1511773683,
+          "Max-Time": 1511775580,
+          "TotalResourceCount": [
+            "346"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 8,
+      "MaxResourceCount": 3,
+      "Execution": [
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1510917047,
+          "Max-Time": 1510919972,
+          "TotalResourceCount": [
+            "136"
+          ]
+        },
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1510921581,
+          "Max-Time": 1510935297,
+          "TotalResourceCount": [
+            "320"
+          ]
+        },
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1511168071,
+          "Max-Time": 1511189132,
+          "TotalResourceCount": [
+            "67",
+            "112",
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 5,
+          "Min-Time": 1510935552,
+          "Max-Time": 1510940429,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1510919987,
+          "Max-Time": 1510932735,
+          "TotalResourceCount": [
+            "136",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1510937819,
+          "Max-Time": 1511175601,
+          "TotalResourceCount": [
+            "320"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1511172062,
+          "Max-Time": 1511185047,
+          "TotalResourceCount": [
+            "692"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1510937745,
+          "Max-Time": 1511180868,
+          "TotalResourceCount": [
+            "490"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 8,
+      "MaxResourceCount": 3,
+      "Execution": [
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1510330713,
+          "Max-Time": 1510566712,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1510327751,
+          "Max-Time": 1510330130,
+          "TotalResourceCount": [
+            "490"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1510323701,
+          "Max-Time": 1510566824,
+          "TotalResourceCount": [
+            "67",
+            "136",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1510316212,
+          "Max-Time": 1510327604,
+          "TotalResourceCount": [
+            "762"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1510334746,
+          "Max-Time": 1510334756,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1510324471,
+          "Max-Time": 1510326572,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1510326694,
+          "Max-Time": 1510328694,
+          "TotalResourceCount": [
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1510327582,
+          "Max-Time": 1510327591,
+          "TotalResourceCount": [
+            "762"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 8,
+      "MaxResourceCount": 2,
+      "Execution": [
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1509718183,
+          "Max-Time": 1509975128,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1509717742,
+          "Max-Time": 1509723597,
+          "TotalResourceCount": [
+            "490"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1509709833,
+          "Max-Time": 1509725642,
+          "TotalResourceCount": [
+            "136",
+            "279"
+          ]
+        },
+        {
+          "TotalTestcases": 8,
+          "Min-Time": 1509724669,
+          "Max-Time": 1509961144,
+          "TotalResourceCount": [
+            "67"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1509974357,
+          "Max-Time": 1509975258,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1509725161,
+          "Max-Time": 1509728167,
+          "TotalResourceCount": [
+            "283"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1509970608,
+          "Max-Time": 1509971478,
+          "TotalResourceCount": [
+            "136"
+          ]
+        },
+        {
+          "TotalTestcases": 3,
+          "Min-Time": 1509965237,
+          "Max-Time": 1509965237,
+          "TotalResourceCount": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 6,
+      "MaxResourceCount": 1,
+      "Execution": [
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1513335224,
+          "Max-Time": 1513339355,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1513350540,
+          "Max-Time": 1513353463,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 7,
+          "Min-Time": 1513343872,
+          "Max-Time": 1513353766,
+          "TotalResourceCount": [
+            "303"
+          ]
+        },
+        {
+          "TotalTestcases": 4,
+          "Min-Time": 1513338120,
+          "Max-Time": 1513339710,
+          "TotalResourceCount": [
+            "112"
+          ]
+        },
+        {
+          "TotalTestcases": 4,
+          "Min-Time": 1513353609,
+          "Max-Time": 1513353668,
+          "TotalResourceCount": [
+            "346"
+          ]
+        },
+        {
+          "TotalTestcases": 4,
+          "Min-Time": 1513354665,
+          "Max-Time": 1513358322,
+          "TotalResourceCount": [
+            "303"
+          ]
+        }
+      ]
+    },
+    {
+      "TotalDevices": 6,
+      "MaxResourceCount": 2,
       "Execution": [
         {
           "TotalTestcases": 5,
           "Min-Time": 1512731104,
-          "Max-Time": 1512749944
+          "Max-Time": 1512749944,
+          "TotalResourceCount": [
+            "346"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512745997,
-          "Max-Time": 1512749441
+          "Max-Time": 1512749441,
+          "TotalResourceCount": [
+            "67"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512730953,
-          "Max-Time": 1512746757
+          "Max-Time": 1512746757,
+          "TotalResourceCount": [
+            "67",
+            "692"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512750101,
-          "Max-Time": 1512750232
+          "Max-Time": 1512750232,
+          "TotalResourceCount": [
+            "346"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512748342,
-          "Max-Time": 1512749417
+          "Max-Time": 1512749417,
+          "TotalResourceCount": [
+            "67"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512746775,
-          "Max-Time": 1512749743
+          "Max-Time": 1512749743,
+          "TotalResourceCount": [
+            "692"
+          ]
         }
       ]
     },
     {
       "TotalDevices": 10,
+      "MaxResourceCount": 3,
       "Execution": [
         {
           "TotalTestcases": 10,
           "Min-Time": 1512381543,
-          "Max-Time": 1512467679
+          "Max-Time": 1512467679,
+          "TotalResourceCount": [
+            "67",
+            "346"
+          ]
         },
         {
           "TotalTestcases": 10,
           "Min-Time": 1512381554,
-          "Max-Time": 1512405962
+          "Max-Time": 1512405962,
+          "TotalResourceCount": [
+            "67",
+            "136",
+            "279"
+          ]
         },
         {
           "TotalTestcases": 10,
           "Min-Time": 1512381564,
-          "Max-Time": 1512411259
+          "Max-Time": 1512411259,
+          "TotalResourceCount": [
+            "67",
+            "112"
+          ]
         },
         {
           "TotalTestcases": 10,
           "Min-Time": 1512381573,
-          "Max-Time": 1512408775
+          "Max-Time": 1512408775,
+          "TotalResourceCount": [
+            "67"
+          ]
         },
         {
           "TotalTestcases": 10,
           "Min-Time": 1512381582,
-          "Max-Time": 1512403242
+          "Max-Time": 1512403242,
+          "TotalResourceCount": [
+            "67",
+            "490"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512467905,
-          "Max-Time": 1512469774
+          "Max-Time": 1512469774,
+          "TotalResourceCount": [
+            "346"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512405999,
-          "Max-Time": 1512469821
+          "Max-Time": 1512469821,
+          "TotalResourceCount": [
+            "136"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512410042,
-          "Max-Time": 1512410058
+          "Max-Time": 1512410058,
+          "TotalResourceCount": [
+            "112"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512403941,
-          "Max-Time": 1512422512
+          "Max-Time": 1512422512,
+          "TotalResourceCount": [
+            "67"
+          ]
         },
         {
           "TotalTestcases": 5,
           "Min-Time": 1512405369,
-          "Max-Time": 1512409907
-        }
-      ]
-    },
-    {
-      "TotalDevices": 6,
-      "Execution": [
-        {
-          "TotalTestcases": 6,
-          "Min-Time": 1511523551,
-          "Max-Time": 1511533525
-        },
-        {
-          "TotalTestcases": 6,
-          "Min-Time": 1511521677,
-          "Max-Time": 1511537247
-        },
-        {
-          "TotalTestcases": 6,
-          "Min-Time": 1511518973,
-          "Max-Time": 1511780404
-        },
-        {
-          "TotalTestcases": 4,
-          "Min-Time": 1511777317,
-          "Max-Time": 1511779263
-        },
-        {
-          "TotalTestcases": 4,
-          "Min-Time": 1511533138,
-          "Max-Time": 1511538995
-        },
-        {
-          "TotalTestcases": 4,
-          "Min-Time": 1511773683,
-          "Max-Time": 1511775580
+          "Max-Time": 1512409907,
+          "TotalResourceCount": [
+            "53"
+          ]
         }
       ]
     },
     {
       "TotalDevices": 8,
+      "MaxResourceCount": 1,
       "Execution": [
         {
-          "TotalTestcases": 5,
-          "Min-Time": 1510917047,
-          "Max-Time": 1510919972
+          "TotalTestcases": 8,
+          "Min-Time": 1515163631,
+          "Max-Time": 1515163670,
+          "TotalResourceCount": [
+            "762"
+          ]
         },
         {
-          "TotalTestcases": 5,
-          "Min-Time": 1510921581,
-          "Max-Time": 1510935297
+          "TotalTestcases": 8,
+          "Min-Time": 1515407348,
+          "Max-Time": 1515407455,
+          "TotalResourceCount": [
+            "520"
+          ]
         },
         {
-          "TotalTestcases": 5,
-          "Min-Time": 1511168071,
-          "Max-Time": 1511189132
-        },
-        {
-          "TotalTestcases": 5,
-          "Min-Time": 1510935552,
-          "Max-Time": 1510940429
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1510919987,
-          "Max-Time": 1510932735
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1510937819,
-          "Max-Time": 1511175601
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1511172062,
-          "Max-Time": 1511185047
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1510937745,
-          "Max-Time": 1511180868
-        }
-      ]
-    },
-    {
-      "TotalDevices": 8,
-      "Execution": [
-        {
-          "TotalTestcases": 7,
-          "Min-Time": 1510330713,
-          "Max-Time": 1510566712
+          "TotalTestcases": 8,
+          "Min-Time": 1515163311,
+          "Max-Time": 1515163719,
+          "TotalResourceCount": [
+            "692"
+          ]
         },
         {
           "TotalTestcases": 7,
-          "Min-Time": 1510327751,
-          "Max-Time": 1510330130
+          "Min-Time": 1515164518,
+          "Max-Time": 1515165975,
+          "TotalResourceCount": [
+            "346"
+          ]
         },
         {
-          "TotalTestcases": 7,
-          "Min-Time": 1510323701,
-          "Max-Time": 1510566824
+          "TotalTestcases": 2,
+          "Min-Time": 1515167715,
+          "Max-Time": 1515167720,
+          "TotalResourceCount": [
+            "762"
+          ]
         },
         {
-          "TotalTestcases": 7,
-          "Min-Time": 1510316212,
-          "Max-Time": 1510327604
+          "TotalTestcases": 2,
+          "Min-Time": 1515407507,
+          "Max-Time": 1515407718,
+          "TotalResourceCount": [
+            "520"
+          ]
         },
         {
-          "TotalTestcases": 3,
-          "Min-Time": 1510334746,
-          "Max-Time": 1510334756
+          "TotalTestcases": 2,
+          "Min-Time": 1515162814,
+          "Max-Time": 1515163247,
+          "TotalResourceCount": [
+            "692"
+          ]
         },
         {
-          "TotalTestcases": 3,
-          "Min-Time": 1510324471,
-          "Max-Time": 1510326572
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1510326694,
-          "Max-Time": 1510328694
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1510327582,
-          "Max-Time": 1510327591
-        }
-      ]
-    },
-    {
-      "TotalDevices": 8,
-      "Execution": [
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1509718183,
-          "Max-Time": 1509975128
-        },
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1509717742,
-          "Max-Time": 1509723597
-        },
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1509709833,
-          "Max-Time": 1509725642
-        },
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1509724669,
-          "Max-Time": 1509961144
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1509974357,
-          "Max-Time": 1509975258
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1509725161,
-          "Max-Time": 1509728167
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1509970608,
-          "Max-Time": 1509971478
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1509965237,
-          "Max-Time": 1509965237
-        }
-      ]
-    },
-    {
-      "TotalDevices": 6,
-      "Execution": [
-        {
-          "TotalTestcases": 9,
-          "Min-Time": 1509118650,
-          "Max-Time": 1509119503
-        },
-        {
-          "TotalTestcases": 9,
-          "Min-Time": 1509112137,
-          "Max-Time": 1509357608
-        },
-        {
-          "TotalTestcases": 9,
-          "Min-Time": 1509099878,
-          "Max-Time": 1509362350
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1509112701,
-          "Max-Time": 1509117277
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1509357576,
-          "Max-Time": 1509357585
-        },
-        {
-          "TotalTestcases": 3,
-          "Min-Time": 1509118958,
-          "Max-Time": 1509360263
-        }
-      ]
-    },
-    {
-      "TotalDevices": 4,
-      "Execution": [
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1508501674,
-          "Max-Time": 1508512461
-        },
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1508503696,
-          "Max-Time": 1508514789
-        },
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1508493505,
-          "Max-Time": 1508504081
-        }
-      ]
-    },
-    {
-      "TotalDevices": 4,
-      "Execution": [
-        {
-          "TotalTestcases": 10,
-          "Min-Time": 1507881116,
-          "Max-Time": 1507898923
-        },
-        {
-          "TotalTestcases": 10,
-          "Min-Time": 1507881131,
-          "Max-Time": 1508149524
-        },
-        {
-          "TotalTestcases": 10,
-          "Min-Time": 1507881142,
-          "Max-Time": 1507904597
-        },
-        {
-          "TotalTestcases": 10,
-          "Min-Time": 1507881151,
-          "Max-Time": 1507901584
-        }
-      ]
-    },
-    {
-      "TotalDevices": 4,
-      "Execution": [
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1507285943,
-          "Max-Time": 1507286509
-        },
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1507290874,
-          "Max-Time": 1507543735
-        },
-        {
-          "TotalTestcases": 8,
-          "Min-Time": 1507303602,
-          "Max-Time": 1507537748
+          "TotalTestcases": 2,
+          "Min-Time": 1515407330,
+          "Max-Time": 1515407464,
+          "TotalResourceCount": [
+            "346"
+          ]
         }
       ]
     }
