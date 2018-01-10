@@ -25,7 +25,7 @@ var bot = controller.spawn({
 controller.middleware.receive.use(wit.receive)
 
 controller.hears('', 'direct_message', function (bot, message) {
-  switch(message.entities.Intent[0].value) {
+  switch(message.entities.intent[0].value) {
     case 'regression-time':
       calculateRegressionTime(bot, message)
       break
