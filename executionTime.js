@@ -13,8 +13,8 @@ chat bot
 var fetcher = require('../public/javascripts/fetcher'),
     fs = require('fs'),
     path = require('path'),
-    rawExecutionResults='./ExecutionResult.json',
-    formattedExecutionResults='./FormattedExecResults.json',
+    rawExecutionResults='./testrailExecutionResults.json',
+    formattedExecutionResults='./formattedExecResults.json',
     projectId = 161;
 
 var executionTime = (function (){
@@ -120,8 +120,8 @@ function appendJsonData(jsonObj) {
 }
 
 //function to get max outof an array
-function maxFromAnArray(arr) {
-  return arr.reduce(function(a, b) { return Math.max(a, b); });
+function totalOfAllResources(arr) {
+  return arr.reduce(function(a, b) { return a+b; });
 }
 
 
@@ -153,7 +153,7 @@ function getMatrix() {
         resourceAvgCount.push(getResourceCount(testcases).length);
       })
 
-      innerMaps['MaxResourceCount'] = maxFromAnArray(resourceAvgCount);
+      innerMaps['MaxResourceCount'] = totalOfAllResources(resourceAvgCount);
       innerMaps['Execution']=execution;
       testPacks.push(innerMaps);
     })
