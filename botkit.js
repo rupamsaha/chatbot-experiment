@@ -8,7 +8,7 @@ const createTestCase = require('./conversations/createTestCase').createTestCase
 
 var Botkit = require('botkit');
 var wit = require('botkit-witai')({
-    accessToken: 'LI5CGZRJNZWQETZ2WS3JMMBAAAZEBVT4',
+    accessToken: '',
     logLevel: 'debug'
 })
 var heading
@@ -18,8 +18,7 @@ var controller = Botkit.slackbot({
 });
 
 var bot = controller.spawn({
-    // token: process.env.token
-    token: 'xoxb-278047956548-DcvOzRb8riFTATHH7ZoOzRTw'
+    token: ''
 }).startRTM();
 
 controller.middleware.receive.use(wit.receive)

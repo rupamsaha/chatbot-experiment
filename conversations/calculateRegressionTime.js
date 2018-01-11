@@ -1,11 +1,12 @@
-let testCases
-let devices
+let testcaseCount
+let devicesCount
+let resourceCount
 let request = require('request')
 
-function predictRegressionTime(testCases, devices, callback){
+function predictRegressionTime(testCases, devices, resources, callback) {
   const options = {
       url: 'http://localhost:3001/predict',
-      qs:{ x: `${testCases},${devices}` }
+      qs:{ x: `${testCases},${devices},${resources}`}
   };
   request(options, function(err, res, body) {
     if (err) {
@@ -41,7 +42,7 @@ exports.calculateRegressionTime = (bot, message) => {
             text: 'Done!',
             // action: some_function() call the function to calculate execution time
             action: function(response, convo) {
-              predictRegressionTime(`{{vars.deviceCount}}`, `{{vars.testCaseCount}}`, (prediction) => {
+              predictRegressionTime(testcaseCount, devicesCount, resourceCount, (prediction) => {
                 bot.reply(message,`According to my calculations it should take around ${prediction} day(s)`);
               })
             }
@@ -52,7 +53,7 @@ exports.calculateRegressionTime = (bot, message) => {
             action: 'deviceCount_thread',
         },'no_response');
 
-        convo.addQuestion(`Kindly confirm your response? DeviceCount: {{vars.deviceCount}} TestCaseCount: {{vars.testCaseCount}}`, [
+        convo.addQuestion(`Kindly confirm your response? DeviceCount: {{vars.deviceCount}} TestCaseCount: {{vars.testCaseCount}} ResourceCount: {{vars.resourceCount}}`, [
           {
               pattern: 'yes',
               callback: function(response, convo) {
@@ -105,6 +106,7 @@ exports.calculateRegressionTime = (bot, message) => {
          quick_replies: [{content_type: "deviceCount"}]
        }, (res, convo)=>{
          convo.setVar('deviceCount', res.text);
+         testcaseCount = res.text
          convo.gotoThread('testCaseCount_thread');
        },{key: "deviceCount"}, 'deviceCount_thread');
 
@@ -112,8 +114,17 @@ exports.calculateRegressionTime = (bot, message) => {
         quick_replies: [{content_type: "testcaseCount"}]
       }, (res, convo)=>{
         convo.setVar('testCaseCount', res.text);
-        convo.gotoThread('confirmation_thread');
+        devicesCount = res.text
+        convo.gotoThread('resourceCount_thread');
       },{key: "testCaseCount"}, 'testCaseCount_thread');
+
+        convo.addQuestion({text: "Kindly tell me total number of Resources?",
+         quick_replies: [{content_type: "resourceCount"}]
+       }, (res, convo)=>{
+         convo.setVar('resourceCount', res.text);
+         resourceCount = res.text
+         convo.gotoThread('confirmation_thread');
+       },{key: "resourceCount"}, 'resourceCount_thread');
 
        convo.on('end', function(convo) {
           if (convo.status == 'completed') {
