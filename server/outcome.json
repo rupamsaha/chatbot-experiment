@@ -3,7 +3,7 @@
   "TestPacks": [
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 16,
@@ -50,7 +50,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 16,
@@ -97,7 +97,7 @@
     },
     {
       "TotalDevices": 7,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 3,
       "Execution": [
         {
           "TotalTestcases": 14,
@@ -128,7 +128,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 1,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 11,
@@ -243,7 +243,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 1,
@@ -292,7 +292,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 3,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 11,
@@ -334,7 +334,7 @@
     },
     {
       "TotalDevices": 8,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 7,
       "Execution": [
         {
           "TotalTestcases": 12,
@@ -398,7 +398,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 3,
       "Execution": [
         {
           "TotalTestcases": 17,
@@ -431,7 +431,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 3,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 13,
@@ -473,7 +473,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 3,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 13,
@@ -515,7 +515,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 8,
@@ -562,7 +562,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 1,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -600,7 +600,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 5,
@@ -639,7 +639,7 @@
     },
     {
       "TotalDevices": 3,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 3,
       "Execution": [
         {
           "TotalTestcases": 12,
@@ -670,7 +670,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 9,
@@ -719,7 +719,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -768,7 +768,7 @@
     },
     {
       "TotalDevices": 6,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 6,
       "Execution": [
         {
           "TotalTestcases": 11,
@@ -824,7 +824,7 @@
     },
     {
       "TotalDevices": 6,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 6,
       "Execution": [
         {
           "TotalTestcases": 8,
@@ -879,7 +879,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -926,7 +926,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 10,
@@ -973,7 +973,7 @@
     },
     {
       "TotalDevices": 6,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 6,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -1028,7 +1028,7 @@
     },
     {
       "TotalDevices": 6,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 6,
       "Execution": [
         {
           "TotalTestcases": 9,
@@ -1083,7 +1083,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 6,
@@ -1132,7 +1132,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 8,
@@ -1181,7 +1181,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 6,
@@ -1220,7 +1220,7 @@
     },
     {
       "TotalDevices": 3,
-      "MaxResourceCount": 1,
+      "MaxResourceCount": 3,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -1250,7 +1250,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 1,
+      "MaxResourceCount": 5,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -1296,7 +1296,7 @@
     },
     {
       "TotalDevices": 5,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 6,
@@ -1335,7 +1335,7 @@
     },
     {
       "TotalDevices": 3,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 3,
       "Execution": [
         {
           "TotalTestcases": 5,
@@ -1366,7 +1366,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 1,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -1404,7 +1404,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 6,
@@ -1443,7 +1443,7 @@
     },
     {
       "TotalDevices": 6,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 6,
       "Execution": [
         {
           "TotalTestcases": 9,
@@ -1498,7 +1498,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 1,
+      "MaxResourceCount": 3,
       "Execution": [
         {
           "TotalTestcases": 8,
@@ -1528,7 +1528,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 4,
       "Execution": [
         {
           "TotalTestcases": 10,
@@ -1570,7 +1570,7 @@
     },
     {
       "TotalDevices": 4,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 3,
       "Execution": [
         {
           "TotalTestcases": 8,
@@ -1601,7 +1601,7 @@
     },
     {
       "TotalDevices": 6,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 6,
       "Execution": [
         {
           "TotalTestcases": 6,
@@ -1657,7 +1657,7 @@
     },
     {
       "TotalDevices": 8,
-      "MaxResourceCount": 3,
+      "MaxResourceCount": 8,
       "Execution": [
         {
           "TotalTestcases": 5,
@@ -1730,7 +1730,7 @@
     },
     {
       "TotalDevices": 8,
-      "MaxResourceCount": 3,
+      "MaxResourceCount": 8,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -1802,7 +1802,7 @@
     },
     {
       "TotalDevices": 8,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 8,
       "Execution": [
         {
           "TotalTestcases": 8,
@@ -1873,7 +1873,7 @@
     },
     {
       "TotalDevices": 6,
-      "MaxResourceCount": 1,
+      "MaxResourceCount": 6,
       "Execution": [
         {
           "TotalTestcases": 7,
@@ -1927,7 +1927,7 @@
     },
     {
       "TotalDevices": 6,
-      "MaxResourceCount": 2,
+      "MaxResourceCount": 6,
       "Execution": [
         {
           "TotalTestcases": 5,
@@ -1982,7 +1982,7 @@
     },
     {
       "TotalDevices": 10,
-      "MaxResourceCount": 3,
+      "MaxResourceCount": 10,
       "Execution": [
         {
           "TotalTestcases": 10,
@@ -2073,7 +2073,7 @@
     },
     {
       "TotalDevices": 8,
-      "MaxResourceCount": 1,
+      "MaxResourceCount": 8,
       "Execution": [
         {
           "TotalTestcases": 8,
