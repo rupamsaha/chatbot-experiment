@@ -8,7 +8,7 @@ const createTestCase = require('./conversations/createTestCase').createTestCase
 
 var Botkit = require('botkit');
 var wit = require('botkit-witai')({
-    accessToken: '',
+    accessToken: 'LI5CGZRJNZWQETZ2WS3JMMBAAAZEBVT4',
     logLevel: 'debug'
 })
 var heading
@@ -19,13 +19,13 @@ var controller = Botkit.slackbot({
 
 var bot = controller.spawn({
     // token: process.env.token
-    token: ''
+    token: 'xoxb-278047956548-DcvOzRb8riFTATHH7ZoOzRTw'
 }).startRTM();
 
 controller.middleware.receive.use(wit.receive)
 
 controller.hears('', 'direct_message', function (bot, message) {
-  switch(message.entities.intent[0].value) {
+  switch(message.entities.Intent[0].value) {
     case 'regression-time':
       calculateRegressionTime(bot, message)
       break

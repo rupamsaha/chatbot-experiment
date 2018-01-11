@@ -4,9 +4,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 var regressionTime = require('./regressionTime')
 
-var filepath = './data.csv'
-
-regressionTime.trainBot(filepath, (lr) => {
+regressionTime.trainBot((lr) => {
   app.get('/predict', (req, res) => {
       var a = lr.predict(req.query.x.split(','))
       res.send([a])

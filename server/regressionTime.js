@@ -1,12 +1,12 @@
 const LinearRegression = require('shaman').LinearRegression,
       data = require('./createTrainingData').trainingData()
 
-function trainBot(filepath, callback) {
+function trainBot(callback) {
   let X = data.map(function(r) {
-    return [Number(r[0]), Number(r[1])]
+    return [Number(r[0]), Number(r[1]), Number(r[2])]
   })
   let y = data.map(function(r) {
-    return Number(r[2])
+    return Number(r[3])
   })
 
   // Initialize and train the linear regression

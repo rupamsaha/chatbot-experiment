@@ -6,12 +6,11 @@ let data = []
 
 exports.trainingData = () => {
     outcome["TestPacks"].forEach((regressions) => {
-    data.push([findTotalTestCases(regressions["Execution"]), regressions["TotalDevices"], findTime(regressions["Execution"])])
+    data.push([findTotalTestCases(regressions["Execution"]), regressions["TotalDevices"], regressions["MaxResourceCount"], findTime(regressions["Execution"])])
   })
+  console.log(data)
   return data
 }
-
-console.log("Data", data)
 
 function findTotalTestCases(arr) {
   let totaltcs = arr[0]["TotalTestcases"]
