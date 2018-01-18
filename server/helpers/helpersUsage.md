@@ -17,4 +17,11 @@
 ```
   setTestRailCredentials('username', 'password')
   addRunInTestRail('191', { "name": "This is a new test run", "case_ids": ['1065399', '1065401'], "include_all": false, "suite_id": 6311 })
-  ```
+```
+3. helperFunctions.js
+
+```
+  getTestCaseIdsFromMappingFile(updatedFiles, 'path/to/mapping.json', function (testCaseIds){
+    console.log(testCaseIds)
+  })
+```
