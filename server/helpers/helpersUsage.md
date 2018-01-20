@@ -5,9 +5,9 @@
 1. gitlog
 ```
   getUpdatedFilesFromGitLog(
-                            { 
+                            {
                               repo: '/path/to/cloned_repo', since: '2018-01-01', before: '2018-01-11'
-                            }, 
+                            },
                               function(updatedFiles){
                                   console.log(updatedFiles)
                                }

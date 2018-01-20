@@ -10,12 +10,12 @@ chat bot
 */
 
 
-var fetcher = require('../public/javascripts/fetcher'),
+var testrail = require('./testrail'),
     fs = require('fs'),
     path = require('path'),
-    rawExecutionResults='./testrailExecutionResults.json',
-    formattedExecutionResults='./formattedExecResults.json',
-    projectId = 161;
+    rawExecutionResults='./source/testrailExecutionResults.json',
+    formattedExecutionResults='./source/formattedExecResults.json',
+    projectId = 161; //currently hard code
 
 var executionTime = (function (){
 
@@ -35,10 +35,10 @@ function convertUnixTimeToHumanReadable(epochtime){
 }
 
 // query the testrail api to fetch project test case execution
-function getTestExecutionTime(month) {
-  fetcher.testrail.getPlans(projectId).then((plans)=>{
+function getTestExecutionTime(month_year) {
+  testrail.getPlans(projectId).then((plans)=>{
       var plan = plans.filter((plan)=>{
-        if(convertUnixTimeToHumanReadable(plan.created_on) == `${month}-2018` &&
+        if(convertUnixTimeToHumanReadable(plan.created_on) == `${month_year}` &&
           plan.name.indexOf('Regression') != -1){
             return true;
           }
@@ -56,13 +56,13 @@ function getTestExecutionTime(month) {
 // get test results from each test plans
 function getTestRuns(plans) {
   var planFetches = plans.map((plan) => {
-    return fetcher.testrail.getPlan(plan.id).then((plan_ids) => {
+    return testrail.getPlan(plan.id).then((plan_ids) => {
       return Promise.all(plan_ids.entries.map((entries)=>{
           var testExecutionResults = entries.runs.map((runs)=>{
-            return fetcher.testrail.getRun(runs.id).then((testpacks) => {
-                return fetcher.testrail.getTests(testpacks.id).then((testcases)=>{
+            return testrail.getRun(runs.id).then((testpacks) => {
+                return testrail.getTests(testpacks.id).then((testcases)=>{
                     return Promise.all(testcases.map((testresult)=>{
-                      return fetcher.testrail.getResults(testresult.id).then((results)=>{
+                      return testrail.getResults(testresult.id).then((results)=>{
                         if(results.length>0)
                        return results;
                     }).catch((err)=>{
@@ -129,7 +129,7 @@ function getMatrix() {
   var testMaps= {};
   var testPacks = [];
 
-  var content = require('./ExecutionResult.json');
+  var content = require('./source/ExecutionResult.json');
   testMaps['Total-Regression'] = content.length;
 
   if (content.length > 0){

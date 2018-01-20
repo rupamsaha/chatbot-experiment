@@ -13,3 +13,7 @@ function getTestCaseIdsFromMappingFile(updatedFiles, mappingFilePath, callback){
   callback(unique([].concat.apply([], testCaseIds)))
   });
 }
+
+module.exports = {
+  getTestCaseIdsFromMappingFile: getTestCaseIdsFromMappingFile
+}
