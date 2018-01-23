@@ -26,15 +26,16 @@ controller.middleware.receive.use(wit.receive)
 controller.hears('', 'direct_message', function (bot, message) {
   if(Object.keys(message.entities).length === 0){
     bot.reply(message,'I cannot understand this. Please try again!')
-  }
-  switch(message.entities.Intent[0].value) {
-    case 'regression-time':
-      calculateRegressionTime(bot, message)
-      break;
-    case 'create-test-pack':
-      createTestCase(bot, message)
-      break;
-    default:
-      bot.reply(message,'I cannot understand this. Please try again!')
+  }else{
+    switch(message.entities.Intent[0].value) {
+      case 'regression-time':
+        calculateRegressionTime(bot, message)
+        break;
+      case 'create-test-pack':
+        createTestCase(bot, message)
+        break;
+      default:
+        bot.reply(message,'I cannot understand this. Please try again!')
+    }
   }
 })

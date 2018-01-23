@@ -1,5 +1,4 @@
-let start_date
-let end_date
+let start_end_date
 var path = require('path');
 var fs = require('fs');
 var log_details = require('../server/helpers/gitlog');
@@ -7,7 +6,7 @@ var testrail = require('../server/helpers/testrail');
 var testCaseIds = require('../server/helpers/helperFunctions')
 var repo = path.join(__dirname,"/../source/bbcthree-web");
 let mappingFilePath = path.join(__dirname + '/../source/mapping.json')
-var test_run_options = { "name": "Test pack for regression by BOT", "include_all": false, "suite_id": 6311 }
+var test_run_options = { "name": "Test pack for regression by BOT", "include_all": false, "suite_id": 5330 }
 var run_id = ''
 const projectId = '191'
 
@@ -15,7 +14,7 @@ exports.createTestCase = (bot, message) => {
   bot.createConversation(message, function(err, convo) {
     convo.addMessage({
           text: 'Sure!',
-          action: 'start_date_thread',
+          action: 'start_end_date_thread',
         },'yes_thread');
 
     // create a path for when a user says NO
@@ -37,19 +36,13 @@ exports.createTestCase = (bot, message) => {
         text: 'Testpack created! https://bbcpodtest.testrail.com/index.php?/runs/overview/191'
     }, 'test-pack-ready')
 
-    convo.addQuestion({text: "Please tell me the start date of the changes in YYYY-MM-DD format?",
-     quick_replies: [{content_type: "start_date"}]
+    convo.addQuestion({text: "Please tell me the date range of the changes done in Code base in this format YYYY-MM-DD,YYYY-MM-DD?",
+     quick_replies: [{content_type: "text"}]
     }, (res, convo)=>{
-     convo.setVar('start_date', res.text);
-     convo.gotoThread('end_date_thread');
-   },{key: "start_date"}, 'start_date_thread');
-
-   convo.addQuestion({text: "Please tell me the end date of the changes in YYYY-MM-DD format?",
-    quick_replies: [{content_type: "end_date"}]
-    }, (res, convo)=>{
-    convo.setVar('end_date', res.text);
-    convo.gotoThread('confirmation_thread');
-  },{key: "end_date"}, 'end_date_thread');
+     convo.setVar('start_end_date', res.text);
+     start_end_date = res.text
+     convo.gotoThread('confirmation_thread');
+   },{key: "start_end_date"}, 'start_end_date_thread');
 
     convo.addQuestion('Do you want to write the test pack based on the changes in Codebase?', [
         {
@@ -78,14 +71,17 @@ exports.createTestCase = (bot, message) => {
         }
     ],{},'default');
 
-    convo.addQuestion(`Kindly confirm your response? Start Date: *{{vars.start_date}}* End Date: *{{vars.end_date}}*`, [
+    convo.addQuestion(`Kindly confirm your response? Start and End Date: *{{vars.start_end_date}}*`, [
       {
           pattern: 'yes',
           callback: function(response, convo) {
-              var options = {repo: repo, since: start_date , before: end_date}
+              var duration = start_end_date.toString().split(',')
+              var options = {repo: repo, since: duration[0] , before: duration[1]}
+
               log_details.getUpdatedFilesFromGitLog(options, (gitfiles) => {
                 testCaseIds.getTestCaseIdsFromMappingFile(gitfiles, mappingFilePath, (caseIds) =>{
-                   fs.writeFileSync(path.join(__dirname + '/../source/caseIds.json'), JSON.stringify(caseIds));
+                   fs.writeFileSync(path.join(__dirname + '/../source/caseIds.json'),
+                   JSON.stringify(caseIds.map((x)=>{return x.replace('C', '');})));
                 })
                 bot.reply(message,`${gitfiles}`);
               })
@@ -106,17 +102,21 @@ exports.createTestCase = (bot, message) => {
       }
     ], {}, 'confirmation_thread')
 
-    convo.addQuestion('Would you like me to create test pack in Testrail?', [
+    convo.addQuestion(`Total test run scenarios :: *${JSON.parse(fs.readFileSync(path.join(__dirname + "/../source/caseIds.json"))).length}*. Would you like me to create test pack in Testrail?`, [
         {
             pattern: 'yes',
             callback: function(response, convo) {
               caseIds = JSON.parse(fs.readFileSync(path.join(__dirname + '/../source/caseIds.json')));
+              test_run_options['case_ids'] = caseIds;
               testrail.addRunInTestRail(projectId, test_run_options, (callback)=>{
-                if(Object.keys(callback).indexOf('id'))
-                bot.reply(message,`Testpack created! https://bbcpodtest.testrail.com/index.php?/runs/overview/191 RUN ID :: ${callback.id}`);
+                if(Object.keys(callback).indexOf('id')==0){
+                  bot.reply(message,`Testpack created! https://bbcpodtest.testrail.com/index.php?/runs/overview/191 RUN ID :: ${callback.id}`);
+                }
 
-                if(callback != undefined && Object.keys(callback).indexOf('error'))
-                bot.reply(message,`Error in creating Test pack, please retry :: ${callback.error}`);
+                if(callback != undefined && Object.keys(callback).indexOf('error')==0) {
+                  bot.reply(message,`Error in creating Test pack, please retry :: ${callback.error}`);
+                }
+
               });
               // convo.gotoThread('test-pack-ready');
             },
