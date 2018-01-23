@@ -13,9 +13,9 @@ chat bot
 var testrail = require('./testrail'),
     fs = require('fs'),
     path = require('path'),
-    rawExecutionResults='./source/testrailExecutionResults.json',
-    formattedExecutionResults='./source/formattedExecResults.json',
-    projectId = 161; //currently hard code
+    rawExecutionResults='../../source/testrailExecutionResults.json',
+    formattedExecutionResults='../../source/formattedExecResults.json',
+    projectId = 191; //currently hard code
 
 var executionTime = (function (){
 
@@ -36,7 +36,7 @@ function convertUnixTimeToHumanReadable(epochtime){
 
 // query the testrail api to fetch project test case execution
 function getTestExecutionTime(month_year) {
-  testrail.getPlans(projectId).then((plans)=>{
+  testrail.Obj.getPlans(projectId).then((plans)=>{
       var plan = plans.filter((plan)=>{
         if(convertUnixTimeToHumanReadable(plan.created_on) == `${month_year}` &&
           plan.name.indexOf('Regression') != -1){
@@ -46,8 +46,7 @@ function getTestExecutionTime(month_year) {
       return plan;
   }).then(getTestRuns)
   .then((arrTestRuns) => {
-    console.log(JSON.stringify(arrTestRuns));
-    // return appendJsonData(arrTestRuns);
+    return appendJsonData(arrTestRuns, rawExecutionResults);
   }).catch((err)=>{
     console.error("Error " + err.stack);
   });
@@ -56,13 +55,13 @@ function getTestExecutionTime(month_year) {
 // get test results from each test plans
 function getTestRuns(plans) {
   var planFetches = plans.map((plan) => {
-    return testrail.getPlan(plan.id).then((plan_ids) => {
+    return testrail.Obj.getPlan(plan.id).then((plan_ids) => {
       return Promise.all(plan_ids.entries.map((entries)=>{
           var testExecutionResults = entries.runs.map((runs)=>{
-            return testrail.getRun(runs.id).then((testpacks) => {
-                return testrail.getTests(testpacks.id).then((testcases)=>{
+            return testrail.Obj.getRun(runs.id).then((testpacks) => {
+                return testrail.Obj.getTests(testpacks.id).then((testcases)=>{
                     return Promise.all(testcases.map((testresult)=>{
-                      return testrail.getResults(testresult.id).then((results)=>{
+                      return testrail.Obj.getResults(testresult.id).then((results)=>{
                         if(results.length>0)
                        return results;
                     }).catch((err)=>{
@@ -97,7 +96,7 @@ function getTestRuns(plans) {
 
 // write the json response in json file
 function writeJson(jsonData, filePath) {
-  fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), function (err) {
+  fs.appendFileSync(filePath, JSON.stringify(jsonData, null, 2), function (err) {
         if (err) throw err
         console.log('Saved file')
   })
@@ -109,13 +108,14 @@ function isEmptyObject(obj) {
 }
 
 // append the json with multiple entries
-function appendJsonData(jsonObj) {
-  if(!fs.existsSync(rawExecutionResults)){
-    writeJson(jsonObj, rawExecutionResults)
+function appendJsonData(jsonObj, filePath) {
+  if(!fs.existsSync(filePath)){
+    console.log("Hello");
+    fs.writeFileSync(filePath, JSON.stringify(jsonObj))
   }else{
-    var tempJson = require(rawExecutionResults);
-    tempJson.push(jsonObj);
-    writeJson(tempJson, rawExecutionResults)
+    var json = JSON.parse(fs.readFileSync(filePath));
+    json.push(jsonObj);
+    fs.writeFileSync(filePath, JSON.stringify(jsonObj))
   }
 }
 
@@ -129,7 +129,7 @@ function getMatrix() {
   var testMaps= {};
   var testPacks = [];
 
-  var content = require('./source/ExecutionResult.json');
+  var content = JSON.parse(fs.readFileSync(rawExecutionResults));
   testMaps['Total-Regression'] = content.length;
 
   if (content.length > 0){
@@ -202,4 +202,4 @@ return {
 })();
 
 // executionTime.getTestExecutionTime(process.argv.slice(2));
-//executionTime.getMatrix();
+// executionTime.getMatrix();

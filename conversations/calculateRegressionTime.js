@@ -22,7 +22,7 @@ exports.calculateRegressionTime = (bot, message) => {
         // create a path for when a user says YES
         convo.addMessage({
                 text: 'You said yes! How wonderful',
-                action: 'deviceCount_thread',
+                action: 'testCaseCount_thread',
         },'yes_thread');
 
         // create a path for when a user says NO
@@ -50,10 +50,10 @@ exports.calculateRegressionTime = (bot, message) => {
 
         convo.addMessage({
             text: 'Ohh! Try Again',
-            action: 'deviceCount_thread',
+            action: 'testCaseCount_thread',
         },'no_response');
 
-        convo.addQuestion(`Kindly confirm your response? DeviceCount: {{vars.deviceCount}} TestCaseCount: {{vars.testCaseCount}} ResourceCount: {{vars.resourceCount}}`, [
+        convo.addQuestion(`Kindly confirm your response? DeviceCount: *{{vars.deviceCount}}* TestCaseCount: *{{vars.testCaseCount}}* ResourceCount: *{{vars.resourceCount}}*`, [
           {
               pattern: 'yes',
               callback: function(response, convo) {
@@ -107,7 +107,7 @@ exports.calculateRegressionTime = (bot, message) => {
        }, (res, convo)=>{
          convo.setVar('deviceCount', res.text);
          testcaseCount = res.text
-         convo.gotoThread('testCaseCount_thread');
+         convo.gotoThread('resourceCount_thread');
        },{key: "deviceCount"}, 'deviceCount_thread');
 
        convo.addQuestion({text: "Kindly tell me total number of testcase Count?",
@@ -115,7 +115,7 @@ exports.calculateRegressionTime = (bot, message) => {
       }, (res, convo)=>{
         convo.setVar('testCaseCount', res.text);
         devicesCount = res.text
-        convo.gotoThread('resourceCount_thread');
+        convo.gotoThread('deviceCount_thread');
       },{key: "testCaseCount"}, 'testCaseCount_thread');
 
         convo.addQuestion({text: "Kindly tell me total number of Resources?",
@@ -128,7 +128,7 @@ exports.calculateRegressionTime = (bot, message) => {
 
        convo.on('end', function(convo) {
           if (convo.status == 'completed') {
-            bot.reply(message,`Thank you. Happy to serve you`)
+            bot.reply(message,`Thank you. Happy to serve you. Is there any thing else I can do?`)
           } else {
             bot.reply(message,'Sorry about that, what else can I do for you?')
           }

@@ -1,11 +1,15 @@
-let heading
-let steps
 let start_date
 let end_date
 var path = require('path');
+var fs = require('fs');
 var log_details = require('../server/helpers/gitlog');
 var testrail = require('../server/helpers/testrail');
-var repo = path.join(__dirname,"../source/bbcthree-web");
+var testCaseIds = require('../server/helpers/helperFunctions')
+var repo = path.join(__dirname,"/../source/bbcthree-web");
+let mappingFilePath = path.join(__dirname + '/../source/mapping.json')
+var test_run_options = { "name": "Test pack for regression by BOT", "include_all": false, "suite_id": 6311 }
+var run_id = ''
+const projectId = '191'
 
 exports.createTestCase = (bot, message) => {
   bot.createConversation(message, function(err, convo) {
@@ -14,9 +18,14 @@ exports.createTestCase = (bot, message) => {
           action: 'start_date_thread',
         },'yes_thread');
 
+    // create a path for when a user says NO
+    convo.addMessage({
+        text: 'You said no, that is too bad. Is there any thing else I can do for you !!',
+    },'no_thread');
+
     convo.addMessage({
         text: 'Ohh! Try Again',
-        action: 'deviceCount_thread',
+        action: 'start_date_thread',
     },'no_response');
 
     convo.addMessage({
@@ -25,7 +34,7 @@ exports.createTestCase = (bot, message) => {
     },'bad_response');
 
     convo.addMessage({
-        text: 'Testpack created! RUN ID : {{vars.run_id}}'
+        text: 'Testpack created! https://bbcpodtest.testrail.com/index.php?/runs/overview/191'
     }, 'test-pack-ready')
 
     convo.addQuestion({text: "Please tell me the start date of the changes in YYYY-MM-DD format?",
@@ -75,6 +84,9 @@ exports.createTestCase = (bot, message) => {
           callback: function(response, convo) {
               var options = {repo: repo, since: start_date , before: end_date}
               log_details.getUpdatedFilesFromGitLog(options, (gitfiles) => {
+                testCaseIds.getTestCaseIdsFromMappingFile(gitfiles, mappingFilePath, (caseIds) =>{
+                   fs.writeFileSync(path.join(__dirname + '/../source/caseIds.json'), JSON.stringify(caseIds));
+                })
                 bot.reply(message,`${gitfiles}`);
               })
               convo.gotoThread('create_test_pack');
@@ -98,12 +110,15 @@ exports.createTestCase = (bot, message) => {
         {
             pattern: 'yes',
             callback: function(response, convo) {
-              var options = { "name": "This is a new test run", "case_ids": ['1065399', '1065401'], "include_all": false, "suite_id": 6311 }
-              testrail.addRunInTestRail('191', options, (testrun_id)=>{
-                convo.setVar('run_id', res.text);
-                bot.reply(message,`${testrun_id}`);
-              })
-              convo.gotoThread('test-pack-ready');
+              caseIds = JSON.parse(fs.readFileSync(path.join(__dirname + '/../source/caseIds.json')));
+              testrail.addRunInTestRail(projectId, test_run_options, (callback)=>{
+                if(Object.keys(callback).indexOf('id'))
+                bot.reply(message,`Testpack created! https://bbcpodtest.testrail.com/index.php?/runs/overview/191 RUN ID :: ${callback.id}`);
+
+                if(callback != undefined && Object.keys(callback).indexOf('error'))
+                bot.reply(message,`Error in creating Test pack, please retry :: ${callback.error}`);
+              });
+              // convo.gotoThread('test-pack-ready');
             },
         },
         {
@@ -119,6 +134,14 @@ exports.createTestCase = (bot, message) => {
             },
         }
     ],{},'create_test_pack');
+
+    convo.on('end', function(convo) {
+       if (convo.status == 'completed') {
+         bot.reply(message,`Thank you. Happy to serve you.`)
+       } else {
+         bot.reply(message,'Sorry about that, what else can I do for you?')
+       }
+    })
 
     convo.activate();
   })

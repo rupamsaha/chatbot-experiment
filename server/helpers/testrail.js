@@ -1,4 +1,5 @@
 Testrail = require('testrail-api');
+var testrail_resp = '';
 
 var testrail = new Testrail({
   host: 'https://bbcpodtest.testrail.com',
@@ -6,16 +7,16 @@ var testrail = new Testrail({
   password: password || Process.env.TESTRAILPASSWORD
 });
 
-function addRunInTestRail (projectID, options) {
+function addRunInTestRail(projectID, options, callback){
   testrail.addRun(projectID, options, function (err, run) {
     if(err){
-      console.log(err)
+      callback(err);
     }
-    return run
+    callback(run);
   });
 }
 
 module.exports = {
   addRunInTestRail: addRunInTestRail,
-  testrail: testrail
+  Obj: testrail
 }

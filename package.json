@@ -22,5 +22,8 @@
     "shaman": "^0.3.2",
     "gitlog": "^3.1.1",
     "testrail-api": "^1.2.0"
+  },
+  "dependencies": {
+    "array-unique": "^0.3.2"
   }
 }

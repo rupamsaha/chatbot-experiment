@@ -1,5 +1,8 @@
 var fs = require('fs');
+var path = require('path');
 var unique = require('array-unique');
+let mappingFilePath = path.join(__dirname + '/../../source/mapping.json')
+var caseIdsCollection = [];
 
 function getTestCaseIdsFromMappingFile(updatedFiles, mappingFilePath, callback){
   var testCaseIds = []

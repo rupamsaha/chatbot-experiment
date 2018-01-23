@@ -1,4 +1,4 @@
-const outcome = require('./outcome.json')
+const outcome = require('../source/outcome_191.json')
 const moment = require('moment')
 const fs = require('fs')
 let data = []
