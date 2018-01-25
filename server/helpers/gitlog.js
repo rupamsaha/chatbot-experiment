@@ -7,7 +7,7 @@ function getUpdatedFilesFromGitLog(options, callback){
     commits.forEach(function(d){
        d['files'].forEach(function(file){
          if(file.includes('.js')){
-           updatedFiles.push(file)
+           updatedFiles.push(file+"\n")
          }
        })
     })

@@ -34,5 +34,5 @@ function findTime(arr) {
   })
   var max = moment.unix(maxTime)
   var min = moment.unix(minTime)
-  return (max.diff(min, 'minutes'))
+  return (max.diff(min, 'hours'))
 }

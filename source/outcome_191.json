@@ -419,69 +419,6 @@
     },
     {
       "TotalDevices": 7,
-      "MaxResourceCount": 8,
-      "Execution": [
-        {
-          "TotalTestcases": 17,
-          "Min-Time": 1507564971,
-          "Max-Time": 1507564971,
-          "TotalResourceCount": [
-            "110"
-          ]
-        },
-        {
-          "TotalTestcases": 17,
-          "Min-Time": 1507565281,
-          "Max-Time": 1507566006,
-          "TotalResourceCount": [
-            "110"
-          ]
-        },
-        {
-          "TotalTestcases": 17,
-          "Min-Time": 1507563769,
-          "Max-Time": 1507565810,
-          "TotalResourceCount": [
-            "994"
-          ]
-        },
-        {
-          "TotalTestcases": 17,
-          "Min-Time": 1507640184,
-          "Max-Time": 1507644280,
-          "TotalResourceCount": [
-            "986"
-          ]
-        },
-        {
-          "TotalTestcases": 17,
-          "Min-Time": 1507564238,
-          "Max-Time": 1507643131,
-          "TotalResourceCount": [
-            "110",
-            "399"
-          ]
-        },
-        {
-          "TotalTestcases": 17,
-          "Min-Time": 1507642289,
-          "Max-Time": 1507644337,
-          "TotalResourceCount": [
-            "994"
-          ]
-        },
-        {
-          "TotalTestcases": 17,
-          "Min-Time": 1507215668,
-          "Max-Time": 1507216779,
-          "TotalResourceCount": [
-            "110"
-          ]
-        }
-      ]
-    },
-    {
-      "TotalDevices": 7,
       "MaxResourceCount": 7,
       "Execution": [
         {

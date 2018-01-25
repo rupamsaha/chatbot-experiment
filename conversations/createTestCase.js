@@ -36,7 +36,7 @@ exports.createTestCase = (bot, message) => {
         text: 'Testpack created! https://bbcpodtest.testrail.com/index.php?/runs/overview/191'
     }, 'test-pack-ready')
 
-    convo.addQuestion({text: "Please tell me the date range of the changes done in Code base in this format YYYY-MM-DD,YYYY-MM-DD?",
+    convo.addQuestion({text: "Please tell me the date range of the changes done at Code base in format *Start and End Date: YYYY-MM-DD,YYYY-MM-DD*",
      quick_replies: [{content_type: "text"}]
     }, (res, convo)=>{
      convo.setVar('start_end_date', res.text);
@@ -102,7 +102,7 @@ exports.createTestCase = (bot, message) => {
       }
     ], {}, 'confirmation_thread')
 
-    convo.addQuestion(`Total test run scenarios :: *${JSON.parse(fs.readFileSync(path.join(__dirname + "/../source/caseIds.json"))).length}*. Would you like me to create test pack in Testrail?`, [
+    convo.addQuestion(`Total *${testCaseIds.getCaseIdCount()}* test cases get created for regression.\n *Would you like me to create test pack in Testrail?*`, [
         {
             pattern: 'yes',
             callback: function(response, convo) {
@@ -111,6 +111,7 @@ exports.createTestCase = (bot, message) => {
               testrail.addRunInTestRail(projectId, test_run_options, (callback)=>{
                 if(Object.keys(callback).indexOf('id')==0){
                   bot.reply(message,`Testpack created! https://bbcpodtest.testrail.com/index.php?/runs/overview/191 RUN ID :: ${callback.id}`);
+                  convo.status = 'completed';
                 }
 
                 if(callback != undefined && Object.keys(callback).indexOf('error')==0) {

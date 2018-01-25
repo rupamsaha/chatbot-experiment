@@ -12,7 +12,7 @@ function predictRegressionTime(testCases, devices, resources, callback) {
     if (err) {
       console.log("Error", err)
     }
-    callback((JSON.parse(body)[0]/1140).toFixed(2))
+    callback((JSON.parse(body)[0]).toFixed(2))
   });
 }
 
@@ -43,7 +43,7 @@ exports.calculateRegressionTime = (bot, message) => {
             // action: some_function() call the function to calculate execution time
             action: function(response, convo) {
               predictRegressionTime(testcaseCount, devicesCount, resourceCount, (prediction) => {
-                bot.reply(message,`According to my calculations it should take around ${prediction} day(s)`);
+                bot.reply(message,`According to my calculations it should take around ${prediction} hour(s)`);
               })
             }
         },'congratulation');

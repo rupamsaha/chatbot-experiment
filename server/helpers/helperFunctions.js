@@ -9,14 +9,23 @@ function getTestCaseIdsFromMappingFile(updatedFiles, mappingFilePath, callback){
   fs.readFile(mappingFilePath, 'utf8', function(err, contents) {
     contents = JSON.parse(contents)
     updatedFiles.forEach(function(file){
-      if(contents[file] != undefined){
-        testCaseIds.push(contents[file])
+      if(contents[file.replaceAll('\n','')] != undefined){
+        testCaseIds.push(contents[file.replaceAll('\n','')])
       }
     })
   callback(unique([].concat.apply([], testCaseIds)))
   });
 }
 
+function getCaseIdCount() {
+  return JSON.parse(fs.readFileSync(path.join(__dirname + "/../../source/caseIds.json"))).length
+}
+
+String.prototype.replaceAll= function(str1, str2, ignore){
+ return this.replace(new RegExp(str1.replace(/([\/\n\`\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+}
+
 module.exports = {
-  getTestCaseIdsFromMappingFile: getTestCaseIdsFromMappingFile
+  getTestCaseIdsFromMappingFile: getTestCaseIdsFromMappingFile,
+  getCaseIdCount: getCaseIdCount
 }
