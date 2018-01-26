@@ -12,7 +12,7 @@ function predictRegressionTime(testCases, devices, resources, callback) {
     if (err) {
       console.log("Error", err)
     }
-    callback((JSON.parse(body)[0]).toFixed(2))
+    callback((JSON.parse(body)[0]/60).toFixed(2))
   });
 }
 
