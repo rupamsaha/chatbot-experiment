@@ -24,7 +24,7 @@ exports.createTestCase = (bot, message) => {
 
     convo.addMessage({
         text: 'Ohh! Try Again',
-        action: 'start_date_thread',
+        action: 'start_end_date_thread',
     },'no_response');
 
     convo.addMessage({
@@ -102,7 +102,7 @@ exports.createTestCase = (bot, message) => {
       }
     ], {}, 'confirmation_thread')
 
-    convo.addQuestion(`Total *${testCaseIds.getCaseIdCount()}* test cases get created for regression.\n *Would you like me to create test pack in Testrail?*`, [
+    convo.addQuestion(`Total *${testCaseIds.getCaseIdCount()}* test cases get created for regression.\n *Would you like me to create test run in Testrail?*`, [
         {
             pattern: 'yes',
             callback: function(response, convo) {
