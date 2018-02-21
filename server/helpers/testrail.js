@@ -3,8 +3,8 @@ var testrail_resp = '';
 
 var testrail = new Testrail({
   host: 'https://bbcpodtest.testrail.com',
-  user: 'username' || Process.env.TESTRAILUSER,
-  password: 'password' || Process.env.TESTRAILPASSWORD
+  user: process.env.TESTRAILUSER,
+  password: process.env.TESTRAILPASSWORD
 });
 
 function addRunInTestRail(projectID, options, callback){
