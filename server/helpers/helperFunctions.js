@@ -17,8 +17,8 @@ function getTestCaseIdsFromMappingFile(updatedFiles, mappingFilePath, callback){
   });
 }
 
-function getCaseIdCount() {
-  return JSON.parse(fs.readFileSync(path.join(__dirname + "/../../source/caseIds.json"))).length
+function getCaseIds() {
+  return JSON.parse(fs.readFileSync(path.join(__dirname + "/../../source/caseIds.json")))
 }
 
 String.prototype.replaceAll= function(str1, str2, ignore){
@@ -27,5 +27,5 @@ String.prototype.replaceAll= function(str1, str2, ignore){
 
 module.exports = {
   getTestCaseIdsFromMappingFile: getTestCaseIdsFromMappingFile,
-  getCaseIdCount: getCaseIdCount
+  getCaseIds: getCaseIds
 }

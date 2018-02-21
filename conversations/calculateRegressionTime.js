@@ -28,7 +28,7 @@ exports.calculateRegressionTime = (bot, message) => {
 
         // create a path for when a user says NO
         convo.addMessage({
-            text: 'You said no, that is too bad.',
+            text: 'You said no, Is there any thing else that I can help you with.',
         },'no_thread');
 
         // create a path where neither option was matched
@@ -40,11 +40,12 @@ exports.calculateRegressionTime = (bot, message) => {
 
         // Once the values are confirmed it Done message
         convo.addMessage({
-            text: 'Done!',
+            text: '',
             // action: some_function() call the function to calculate execution time
             action: function(response, convo) {
               predictRegressionTime(colDetails[0], colDetails[1], colDetails[2], (prediction) => {
                 bot.reply(message,`*According to my calculations it should take around* :: ${prediction} hour(s)`);
+                bot.reply(message, 'Thank you. Happy to serve you. Is there any thing else I can do?');
               })
             }
         },'congratulation');
@@ -114,13 +115,13 @@ exports.calculateRegressionTime = (bot, message) => {
          convo.gotoThread('confirmation_thread');
        },{key: "colDetails"}, 'deviceCount_thread');
 
-       convo.on('end', function(convo) {
-          if (convo.status == 'completed') {
-            bot.reply(message,`Thank you. Happy to serve you. Is there any thing else I can do?`)
-          } else {
-            bot.reply(message,'Sorry about that, what else can I do for you?')
-          }
-       })
+       // convo.on('end', function(convo) {
+       //    if (convo.status == 'completed') {
+       //      bot.reply(message,'Thank you. Happy to serve you. Is there any thing else I can do?')
+       //    } else {
+       //      bot.reply(message,'Sorry about that, what else can I do for you?')
+       //    }
+       // })
 
       convo.activate();
     });

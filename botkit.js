@@ -8,7 +8,7 @@ const createTestCase = require('./conversations/createTestCase').createTestCase
 
 var Botkit = require('botkit');
 var wit = require('botkit-witai')({
-    accessToken: '',
+    accessToken: process.env.WIT_TOKEN,
     logLevel: 'debug'
 })
 var heading
@@ -18,14 +18,14 @@ var controller = Botkit.slackbot({
 });
 
 var bot = controller.spawn({
-    token: ''
+    token: process.env.BOT_TOKEN
 }).startRTM();
 
 controller.middleware.receive.use(wit.receive)
 
 controller.hears('', 'direct_message', function (bot, message) {
   if(Object.keys(message.entities).length === 0){
-    bot.reply(message,'I cannot understand this. Please try again!')
+    bot.reply(message,'Not understood. Please try again!')
   }else{
     switch(message.entities.Intent[0].value) {
       case 'regression-time':
@@ -35,7 +35,7 @@ controller.hears('', 'direct_message', function (bot, message) {
         createTestCase(bot, message)
         break;
       default:
-        bot.reply(message,'I cannot understand this. Please try again!')
+        bot.reply(message,'Not understood. Please try again!')
     }
   }
 })
