@@ -7,7 +7,10 @@ const url = "https://tap-dashboard.tools.bbc.co.uk/graphs/devices/top/past_week"
 options = {
   method: 'GET',
   uri: 'https://tap-dashboard.tools.bbc.co.uk/graphs/devices/top',
-  timeout: 100000
+  timeout: 100000,
+  headers: {
+    'Keep-Alive': {'timeout': 5, 'max': 10}
+  }
 }
 
 httpClient.get(options, function(error, response, data) {
