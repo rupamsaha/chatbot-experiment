@@ -25,6 +25,7 @@
     "testrail-api": "^1.2.0"
   },
   "dependencies": {
-    "array-unique": "^0.3.2"
+    "array-unique": "^0.3.2",
+    "@bbc/http-client": "git+ssh://git@github.com/bbc/bbc-http-client-node.git"
   }
 }
