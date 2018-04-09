@@ -1,6 +1,5 @@
 const { exec }     = require('child_process');
 var process        = require('process');
-const REPO_PATH    = "path/to/tap-static/cloned/repo";
 
 function releaseDiff(repo_path ,oldRelease, newRelease, callback){
     process.chdir(repo_path)
